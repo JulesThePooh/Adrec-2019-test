@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Morpion</title>
+
+    <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container">
+        <h1 class="navbar-brand text-white">
+            Morpion
+        </h1>
+    </div>
+</nav>
+
+<section class="game-section">
+    <div class="container">
+        <div class="card">
+            <h2 class="h5 card-header">
+                Paramétrage de la partie
+            </h2>
+
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="player-1">
+                        Nom du joueur 1 :
+                    </label>
+
+                    <input id="player-1" type="text" class="form-control" onkeyup="recupnom()" placeholder="Joueur 1" >
+                </div>
+
+                <div class="form-group">
+                    <label for="player-2">
+                        Nom du joueur 2 :
+                    </label>
+
+                    <input id="player-2" type="text" class="form-control" onkeyup="recupnom2()" placeholder="Joueur 2">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="game-section">
+    <div class="container">
+        <div class="card">
+            <h2 class="h5 card-header">
+                Jeu
+            </h2>
+
+            <div class="card-body text-center">
+                <div class="text-center">
+                    Tour de <span id = "tour-de">Joueur 1</span>
+                </div>
+
+                <div class="square-wrapper">
+                    <div class="square-line">
+                        <div class="square" onclick= "animation_croix('1', '1')" id='A1' >
+                            <span class="square-text" id='span_A1'></span>
+                        </div>
+
+                        <div class="square" onclick= "animation_croix('2', '2')">
+                            <span class="square-text" id='span_A2'></span>
+                        </div>
+
+                        <div class="square" onclick= "animation_croix('3', '3')">
+                            <span class="square-text" id='span_A3'></span>
+                        </div>
+                    </div>
+
+                    <div class="square-line">
+                        <div class="square" onclick= "animation_croix('4', '4')">
+                            <span class="square-text" id='span_A4'></span>
+                        </div>
+
+                        <div class="square" onclick= "animation_croix('5', '5')">
+                            <span class="square-text" id='span_A5'></span>
+                        </div>
+
+                        <div class="square" onclick= "animation_croix('6', '6')">
+                            <span class="square-text" id='span_A6'></span>
+                        </div>
+                    </div>
+
+                    <div class="square-line">
+                        <div class="square" onclick= "animation_croix('7', '7')">
+                            <span class="square-text" id='span_A7'></span>
+                        </div>
+
+                        <div class="square" onclick= "animation_croix('8', '8')">
+                            <span class="square-text" id='span_A8'></span>
+                        </div>
+
+                        <div class="square" onclick= "animation_croix('9', '9')">
+                            <span class="square-text" id='span_A9'></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="game-section">
+    <div class="text-center">
+        <button type="button" onclick = "restartgame()" class="btn btn-primary btn-lg">
+            Recommencer la partie
+        </button>
+    </div>
+</section>
+
+<script src="assets/scripts/scripts.js"></script>
+
+</body>
+</html>
